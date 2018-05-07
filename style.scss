@@ -1,0 +1,71 @@
+body{
+	margin:0;
+	background-color: #9D9D9D;
+}
+
+*{
+	transition:2s;
+}
+.book{
+	width: 300px;
+	height: 450px; 
+	background-color: #431C21;
+	position:absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%, -50%) perspective(1000px);
+	transform-style: preserve-3d;
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+	.cover{
+		width:calc(100% - 20px);
+		height: 100%;
+		position: absolute;
+		left: 20px;
+		background-color: #272727;
+		transform: rotateY(0deg);
+		transform-style: preserve-3d;
+		transform-origin:left;
+		z-index: 50;
+		figure{
+
+			margin: 0;
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility:hidden;
+		}
+		figure.front{
+			background-color: red;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		figure.back{
+			position: absolute;
+
+			transform: rotateY(-179deg);
+
+
+		}
+	}
+	.page{
+		border: 1px solid black;
+		width:calc(100% - 25px);
+		height: calc(100% - 10px);
+		position: absolute;
+		top: 5px;
+		left: 20px;
+		background-color: #308080;
+		transform: rotateY(0deg);
+		transform-style: preserve-3d;
+		transform-origin:left;
+		span{
+			margin:0 auto;
+			padding-top: 10px;
+		}
+	}
+	
+
+}
